@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCCCCC"
+    tools:context="com.Tornado.englishgrammar.practice.PracticeFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:background="@color/toolbar_practice"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_practice_fragment"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

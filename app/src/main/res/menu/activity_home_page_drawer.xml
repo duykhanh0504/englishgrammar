@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+            <item
+                android:id="@+id/lesson"
+                android:icon="@mipmap/ic_lesson"
+                android:title="Bài học ngữ pháp"
+                android:checkable="true"/>
+
+
+            <item
+                android:id="@+id/feedback"
+                android:icon="@mipmap/ic_feedback"
+                android:title="Liên hệ"
+                android:checkable="true"/>
+
+              <item
+                 android:id="@+id/rating"
+                 android:icon="@mipmap/ic_feedback"
+                 android:title="Ý kiến đánh giá"
+                  android:checkable="true"/>
+
+
+
+
+</menu>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_home_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CECECE"
+    android:paddingBottom="6dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="6dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.Tornado.englishgrammar.home_page.MainActivity"
+    tools:showIn="@layout/app_bar_home_page">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lesson_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_red"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        app:menu_colorNormal="@android:color/holo_blue_dark"
+        app:menu_colorPressed="@android:color/holo_blue_light"
+        app:menu_backgroundColor="#ccffffff"
+        app:menu_fab_label="Hủy"
+        app:menu_labels_ellipsize="end"
+        app:menu_labels_singleLine="true">
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#FFC100"
+            app:fab_colorPressed="#FFD34C"
+            app:fab_label="Tra từ Anh-Việt"
+            app:fab_size="normal"
+            android:src="@mipmap/ic_search" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#329932"
+            app:fab_colorPressed="#5AAD5A"
+            app:fab_label="Bật/tắt nhạc"
+            android:src="@drawable/ic_music"
+            app:fab_size="normal" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Nhắc nhở"
+            android:src="@drawable/ic_reminder"
+            app:fab_size="normal" />
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

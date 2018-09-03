@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4CB8AB</color>
+    <color name="colorPrimaryDark">#4CB8AB</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="colorgreen">#0F9D58</color>
+    <color name="toolbar_practice">#DD4339</color>
+    <color name="selected_answer">#EFA947</color>
+    <color name="correct_answer">#33CD8D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="toolbar_test_activity">#2196F3</color>
+</resources>

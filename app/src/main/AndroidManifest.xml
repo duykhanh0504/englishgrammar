@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.Tornado.englishgrammar">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.Tornado.englishgrammar.home_page.MainActivity"
+            android:label="Bài học ngữ pháp"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.Tornado.englishgrammar.FavoriteLessonActivity"
+            android:label="@string/title_activity_favorite_lesson"
+            android:parentActivityName="com.Tornado.englishgrammar.home_page.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.Tornado.englishgrammar.home_page.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.Tornado.englishgrammar.home_page.TenseLessonActivity"
+            android:label="Các thì trong tiếng anh"
+            android:parentActivityName="com.Tornado.englishgrammar.home_page.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.Tornado.englishgrammar.home_page.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.Tornado.englishgrammar.home_page.WordTypeLessonActivity"
+            android:label="Từ loại"
+            android:parentActivityName="com.Tornado.englishgrammar.home_page.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.Tornado.englishgrammar.home_page.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.Tornado.englishgrammar.lesson.LessonActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.Tornado.englishgrammar.home_page.MainActivity" />
+        </activity>
+        <activity android:name="com.Tornado.englishgrammar.practice.TestActivity"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>
