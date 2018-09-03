@@ -33,7 +33,7 @@ public class FavoriteLessonActivity extends AppCompatActivity {
         LessonList lessonList = LessonList.get(this);
         List<Lesson> favoriteLessons = new ArrayList<>();
         for (Lesson lesson: lessonList.getLessons()) {
-            if (lesson.isFavorite()) favoriteLessons.add(lesson);
+            if (lesson.isFavorite() ==1) favoriteLessons.add(lesson);
         }
         RecyclerView.Adapter mLessonAdapter = new LessonAdapter(this, favoriteLessons);
         mLessonRecyclerView.setAdapter(mLessonAdapter);

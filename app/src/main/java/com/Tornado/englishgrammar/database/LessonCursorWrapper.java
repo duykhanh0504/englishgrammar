@@ -15,6 +15,8 @@ public class LessonCursorWrapper extends CursorWrapper {
         String lessonDescription = getString(getColumnIndex(LessonDatabase.LessonTable.lessonDescription));
         int isFavorite = getInt(getColumnIndex(LessonDatabase.LessonTable.ISFAVORITE));
         int uuid = getInt(getColumnIndex(LessonDatabase.LessonTable.UUID));
-        return new Lesson(lessonName, lessonDescription, isFavorite == 1, uuid);
+        int islearning = getInt(getColumnIndex(LessonDatabase.LessonTable.ISlEANING));
+        int type = getInt(getColumnIndex(LessonDatabase.LessonTable.TYPE));
+        return new Lesson(lessonName, lessonDescription, isFavorite ,islearning,type, uuid);
     }
 }

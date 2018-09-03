@@ -3,14 +3,18 @@ package com.Tornado.englishgrammar.lesson_recycler_view;
 public class Lesson {
     private String name;
     private String description;
-    private boolean isFavorite;
-    private int uuid;
+    private int isFavorite;
+    private int isleaning;
+    private int type;
+    private int id;
 
-    public Lesson(String n, String des, boolean isFavorite, int uuid) {
-        this.uuid = uuid;
+    public Lesson(String n, String des, int isFavorite, int isleaning, int type , int uuid) {
+        this.id = uuid;
         name = n;
         description = des;
         this.isFavorite = isFavorite;
+        this.type =type;
+        this.isleaning =isleaning;
     }
 
     public String getLessonName() {
@@ -19,15 +23,30 @@ public class Lesson {
 
     public String getLessonDescription() {return description;}
 
-    public void setFavorite(boolean f) {
-        isFavorite = f;
+    public void setLearning(int f) {
+        isleaning = f;
     }
 
-    public boolean isFavorite() {
+    public int isLearning() {
+        return isleaning;
+    }
+    public int isFavorite() {
         return isFavorite;
     }
 
+    public void setType(int f) {
+        type = f;
+    }
+
+    public int isType() {
+        return type;
+    }
+
+
     public int getUuid() {
-        return uuid;
+        return id;
+    }
+    public void getsetUuid(int uuid) {
+         id = uuid;
     }
 }

@@ -41,7 +41,7 @@ public class LessonList {
         ContentValues values = new ContentValues();
         values.put(LessonTable.lessonName, lesson.getLessonName());
         values.put(LessonTable.lessonDescription, lesson.getLessonDescription());
-        values.put(LessonTable.ISFAVORITE, lesson.isFavorite() ? 1 : 0);
+        values.put(LessonTable.ISFAVORITE, lesson.isFavorite());
         return values;
     }
 
@@ -58,6 +58,6 @@ public class LessonList {
 
     private LessonList(Context context) {
         Context mContext = context.getApplicationContext();
-        mDatabase = new LessonBaseHelper(mContext).getWritableDatabase();
+        mDatabase =  LessonBaseHelper.getDatabase(mContext).getWritableDatabase();
     }
 }

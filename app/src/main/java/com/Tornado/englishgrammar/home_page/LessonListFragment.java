@@ -46,7 +46,8 @@ public class LessonListFragment extends Fragment {
         LessonList lessonList = LessonList.get(getContext());
         List<Lesson> listLessons = new ArrayList<>();
         for (Lesson lesson : lessonList.getLessons()) {
-            if (lesson.getUuid() <= 32) listLessons.add(lesson);
+            //if (lesson.getUuid() <= 32)
+                listLessons.add(lesson);
         }
         mLessonAdapter = new LessonAdapter(getContext(), listLessons);
         mLessonRecyclerView.setAdapter(mLessonAdapter);

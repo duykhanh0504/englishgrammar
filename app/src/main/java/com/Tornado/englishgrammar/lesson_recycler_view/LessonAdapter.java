@@ -84,7 +84,7 @@ public class LessonAdapter extends RecyclerView.Adapter{
         lessonHolder.lessonName.setTextColor(Color.parseColor("#0B8E46"));
         lessonHolder.lessonDescription.setText(lessonList.get(position).getLessonDescription());
         lessonHolder.lessonDescription.setTextColor(Color.parseColor("#686868"));
-        lessonHolder.imageView.setImageResource(listImage[position]);
+        //lessonHolder.imageView.setImageResource(listImage[position]);
         if (lessonList.get(position).getUuid() == 1) {
             lessonHolder.lessonCard.setOnClickListener(new View.OnClickListener() {
                 @Override
