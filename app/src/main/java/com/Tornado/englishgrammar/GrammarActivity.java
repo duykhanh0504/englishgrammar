@@ -17,7 +17,7 @@ public class GrammarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_grammar);
-
+        int id  = getIntent().getIntExtra("id",-1);
         WebView webView = (WebView) this.findViewById(R.id.grammar_webview);
 
         WebSettings webSettings = webView.getSettings();
@@ -43,7 +43,8 @@ public class GrammarActivity extends AppCompatActivity {
         }
 
         // webView.loadData("ABC", "text/html", "UTF-8");
-        webView.loadUrl("file:///android_asset/tinhtu.html");
+        String url = "file:///android_asset/lesson"  + id + ".html";
+        webView.loadUrl(url);
         webView.requestFocus();
     }
 }

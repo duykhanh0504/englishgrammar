@@ -49,6 +49,7 @@ public class LessonAdapter extends RecyclerView.Adapter{
                 @Override
                 public void onClick(View v) {
                    Intent i = new Intent(mContext, GrammarActivity.class);
+                   i.putExtra("id" , lessonList.get(position).getUuid());
                     mContext.startActivity(i);
                    // mContext.getApplicationContext().
                    // ((MainActivity) mContext).ShowFragmentGrammer("");
