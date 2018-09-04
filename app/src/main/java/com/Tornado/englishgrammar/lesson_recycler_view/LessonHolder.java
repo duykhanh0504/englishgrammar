@@ -17,7 +17,7 @@ class LessonHolder extends RecyclerView.ViewHolder {
     LessonHolder(final View itemView) {
         super(itemView);
         lessonCard = (CardView) itemView.findViewById(R.id.lesson_card);
-        imageView = (ImageView) itemView.findViewById(R.id.image_tittle);
+       // imageView = (ImageView) itemView.findViewById(R.id.image_tittle);
         lessonName = (TextView) itemView.findViewById(R.id.lesson_name);
         lessonDescription = (TextView) itemView.findViewById(R.id.lesson_description);
     }

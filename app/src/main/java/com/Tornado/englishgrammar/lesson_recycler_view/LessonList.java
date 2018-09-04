@@ -9,6 +9,7 @@ import java.util.List;
 
 import com.Tornado.englishgrammar.database.LessonBaseHelper;
 import com.Tornado.englishgrammar.database.LessonCursorWrapper;
+import com.Tornado.englishgrammar.database.LessonDatabase;
 import com.Tornado.englishgrammar.database.LessonDatabase.LessonTable;
 
 public class LessonList {
@@ -25,6 +26,36 @@ public class LessonList {
     public List<Lesson> getLessons() {
         List<Lesson> lessons = new ArrayList<>();
         LessonCursorWrapper cursor = queryLessons(null, null);
+        try {
+            cursor.moveToFirst();
+            while (!cursor.isAfterLast()) {
+                lessons.add(cursor.getLesson());
+                cursor.moveToNext();
+            }
+        } finally {
+            cursor.close();
+        }
+        return lessons;
+    }
+
+    public List<Lesson> getLessonsSentence() {
+        List<Lesson> lessons = new ArrayList<>();
+        LessonCursorWrapper cursor = queryLessons(LessonTable.TYPE +" = 1", null);
+        try {
+            cursor.moveToFirst();
+            while (!cursor.isAfterLast()) {
+                lessons.add(cursor.getLesson());
+                cursor.moveToNext();
+            }
+        } finally {
+            cursor.close();
+        }
+        return lessons;
+    }
+
+    public List<Lesson> getLessonsWord() {
+        List<Lesson> lessons = new ArrayList<>();
+        LessonCursorWrapper cursor = queryLessons(LessonTable.TYPE +" = 2", null);
         try {
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {

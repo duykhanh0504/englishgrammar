@@ -25,6 +25,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.Tornado.englishgrammar.R;
+import com.Tornado.englishgrammar.lesson.GrammarFragment;
 import com.Tornado.englishgrammar.practice.PracticeFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -63,6 +64,11 @@ public class MainActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().add(R.id.fragment, new LessonListFragment()).commit();
         }
         navigationView.setCheckedItem(R.id.lesson);
+    }
+
+    public void ShowFragmentGrammer(String i)
+    {
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new GrammarFragment()).commit();
     }
 
     @Override

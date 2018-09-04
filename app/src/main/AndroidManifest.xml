@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.Tornado.englishgrammar.home_page.MainActivity"
+            android:name=".home_page.MainActivity"
             android:label="Bài học ngữ pháp"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -20,9 +20,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.Tornado.englishgrammar.FavoriteLessonActivity"
+            android:name=".FavoriteLessonActivity"
             android:label="@string/title_activity_favorite_lesson"
-            android:parentActivityName="com.Tornado.englishgrammar.home_page.MainActivity"
+            android:parentActivityName=".home_page.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -30,9 +30,9 @@
                 android:value="com.Tornado.englishgrammar.home_page.MainActivity" />
         </activity>
         <activity
-            android:name="com.Tornado.englishgrammar.home_page.TenseLessonActivity"
+            android:name=".home_page.TenseLessonActivity"
             android:label="Các thì trong tiếng anh"
-            android:parentActivityName="com.Tornado.englishgrammar.home_page.MainActivity"
+            android:parentActivityName=".home_page.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -40,9 +40,9 @@
                 android:value="com.Tornado.englishgrammar.home_page.MainActivity" />
         </activity>
         <activity
-            android:name="com.Tornado.englishgrammar.home_page.WordTypeLessonActivity"
+            android:name=".home_page.WordTypeLessonActivity"
             android:label="Từ loại"
-            android:parentActivityName="com.Tornado.englishgrammar.home_page.MainActivity"
+            android:parentActivityName=".home_page.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -50,7 +50,7 @@
                 android:value="com.Tornado.englishgrammar.home_page.MainActivity" />
         </activity>
         <activity
-            android:name="com.Tornado.englishgrammar.lesson.LessonActivity"
+            android:name=".lesson.LessonActivity"
             android:label=""
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -58,9 +58,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.Tornado.englishgrammar.home_page.MainActivity" />
         </activity>
-        <activity android:name="com.Tornado.englishgrammar.practice.TestActivity"
-            android:screenOrientation="portrait">
-        </activity>
+        <activity
+            android:name=".practice.TestActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".GrammarActivity"></activity>
     </application>
 
 </manifest>
