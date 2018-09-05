@@ -38,6 +38,22 @@ public class LessonList {
         return lessons;
     }
 
+    public List<Lesson> searchLesson(String text) {
+        List<Lesson> lessons = new ArrayList<>();
+        LessonCursorWrapper cursor = queryLessons(LessonTable.lessonName +" like '%" +text+"%'" , null);
+        try {
+            cursor.moveToFirst();
+            while (!cursor.isAfterLast()) {
+                lessons.add(cursor.getLesson());
+                cursor.moveToNext();
+            }
+        } finally {
+            cursor.close();
+        }
+        return lessons;
+    }
+
+
     public List<Lesson> getLessonsSentence() {
         List<Lesson> lessons = new ArrayList<>();
         LessonCursorWrapper cursor = queryLessons(LessonTable.TYPE +" = 1", null);

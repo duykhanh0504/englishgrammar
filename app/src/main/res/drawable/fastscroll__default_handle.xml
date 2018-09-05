@@ -6,5 +6,5 @@
         android:topRightRadius="@dimen/fastscroll__bubble_corner"
         android:bottomLeftRadius="@dimen/fastscroll__bubble_corner"
         android:bottomRightRadius="0dp" />
-    <solid android:color="#a20B7E46" />
+    <solid android:color="@color/colorPrimary" />
 </shape>
